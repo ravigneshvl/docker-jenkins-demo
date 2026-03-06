@@ -1,8 +1,8 @@
-from flake import Flake
+from flask import Flask
 
-app = Flake(__name__)
+app = Flask(__name__)
 @app.route("/")
-def home():
-    return "CICD with Flake is working!"
+def hello():
+    return "CICD with Flask is working!"
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
